@@ -56,4 +56,4 @@ docker login \
        --password ${bamboo_DOCKER_REGISTRY_PASSWORD} \
        ${bamboo_DOCKER_REGISTRY_SERVER}
 
-docker push ${REPO}
+docker push ${DOCKER_REPO}
