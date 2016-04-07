@@ -1,10 +1,11 @@
 #!/bin/bash
 
-if [[ $# -lt 1 ]]; then
-    echo "usage: ${0##*/} COMMAND"
+if [[ $# -lt 2 ]]; then
+    echo "usage: ${0##*/} PROJECT COMMAND"
     exit 1
 fi
-DOCKER_CMD=${1}
+PROJECT=${1}
+DOCKER_CMD=${2}
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
