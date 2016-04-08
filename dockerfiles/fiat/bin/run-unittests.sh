@@ -6,5 +6,5 @@
 sudo chmod -R a+w ${BAMBOO_WORKDIR}
 
 # Run tests and copy results to BAMBOO_WORKDIR
-cd ${HOME}/build/src/dolfin/build
-./test/unit/cpp/unittests_cpp --gtest_output=xml:${BAMBOO_WORKDIR}/report.xml
+cd ${HOME}/build/src/fiat/test/unit
+${PYTHON} -B -m nose --verbose --with-xunit --xunit-file=${BAMBOO_WORKDIR}/report.xml

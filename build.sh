@@ -40,7 +40,7 @@ docker run \
        --volume ${bamboo_working_directory}:${BAMBOO_WORKDIR} \
        --workdir /home/fenics \
        ${DOCKER_IMAGE}-builder:tmp \
-       build
+       build.sh
 
 docker commit \
        --author "FEniCS Bamboo" \

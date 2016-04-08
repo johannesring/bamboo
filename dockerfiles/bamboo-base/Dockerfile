@@ -2,9 +2,9 @@ FROM quay.io/fenicsproject/dev-env:latest
 
 USER root
 
-# Install ccache
+# Install ccache and nose
 RUN apt-get -qq update && \
-    apt-get -y install ccache && \
+    apt-get -y install ccache python-nose && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
